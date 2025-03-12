@@ -15,5 +15,4 @@
         public string SMTPAccount { get; set; }
         public string SMTPPassword { get; set; }
     }
-
 }
