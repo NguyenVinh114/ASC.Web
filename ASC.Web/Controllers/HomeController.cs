@@ -7,7 +7,7 @@ using System.Diagnostics;
 
 namespace ASC.Web.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : AnonymousController
     {
         /*private readonly ILogger<HomeController> _logger;*/
 

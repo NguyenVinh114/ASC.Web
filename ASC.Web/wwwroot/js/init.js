@@ -1,8 +1,21 @@
-(function($){
-  $(function(){
+(function ($) {
+    $(function () {
 
-    $('.sidenav').sidenav();
-    $('.parallax').parallax();
+        $('.sidenav').sidenav();
+        $('.parallax').parallax();
 
-  }); // end of document ready
-})(jQuery); // end of jQuery name space
+        if (window.history && window.history.pushState) {
+            window.history.pushState('forward', '', window.location.href);
+            $(window).on('popstate', function (e) {
+                window.history.pushState('forward', '', window.location.href);
+                e.preventDefault();
+            });
+        }
+        $(document).ready(function () {
+            $(window).on("contextmenu", function () {
+                return false;
+            });
+        });
+
+    });
+})(jQuery);
